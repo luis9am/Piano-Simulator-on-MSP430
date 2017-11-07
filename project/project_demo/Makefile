@@ -11,7 +11,7 @@ AS              = msp430-elf-as
 all: buzzerBlink.elf 
 
 #additional rules for files
-buzzerBlink.elf: ${COMMON_OBJECTS} bbmain.o led.o buzzer.o wdInterruptHandler.o ../lib/libTimer.a
+buzzerBlink.elf: ${COMMON_OBJECTS} projectmain.o led.o buzzer.o wdInterruptHandler.o ../lib/libTimer.a
 	${CC} $(CFLAGS) $^ $(LDFLAGS) -o $@ 
 
 load: buzzerBlink.elf

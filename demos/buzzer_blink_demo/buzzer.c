@@ -25,14 +25,13 @@ void buzzer_init()
 
     buzzer_advance_frequency();	/* start buzzing!!! */
 }
-
 void buzzer_advance_frequency() 
 {
   period += rate;
   if ((rate > 0 && (period > MAX_PERIOD)) || 
       (rate < 0 && (period < MIN_PERIOD))) {
     rate = -rate;
-    period += (rate << 1);
+    period += (rate << 2);
   }
   buzzer_set_period(period);
 }
@@ -40,7 +39,7 @@ void buzzer_advance_frequency()
 void buzzer_set_period(short cycles)
 {
   CCR0 = cycles; 
-  CCR1 = cycles >> 1;		/* one half cycle */
+  CCR1 = cycles >> 3;		/* one half cycle */
 }
 
 
