@@ -1,28 +1,32 @@
 # makfile configuration
 COMMON_OBJECTS  = 
 CPU             = msp430g2553
-CFLAGS          = -mmcu=${CPU} -I../h 
-LDFLAGS = ../lib/libTimer.a -L/opt/ti/msp430_gcc/include
+CFLAGS          = -mmcu=${CPU} -I../h
+LDFLAGS		= -L/opt/ti/msp430_gcc/include
 
 #switch the compiler (for the internal make rules)
 CC              = msp430-elf-gcc
 AS              = msp430-elf-as
 
-all: buzzerBlink.elf 
+all: blink.elf 
 
 #additional rules for files
+<<<<<<< HEAD
 buzzerBlink.elf: ${COMMON_OBJECTS} projectmain.o led.o buzzer.o wdInterruptHandler.o ../lib/libTimer.a
 	${CC} $(CFLAGS) $^ $(LDFLAGS) -o $@ 
+=======
+blink.elf: ${COMMON_OBJECTS} projectmain.o stateMachines.o led.o wdInterruptHandler.c ../lib/libTimer.a
+	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^
+>>>>>>> 4b5514239ca67c5570e411596aa506386eaf29f1
 
-load: buzzerBlink.elf
-	mspdebug rf2500 "prog $^"
+load: blink.elf
+	mspdebug rf2500 "prog blink.elf"
 
 clean:
 	rm -f *.o *.elf
 
+led.o: led.c led.h
 
-bbmain.o: buzzer.h led.h
-led.o: led.h
-buzzer.c: buzzer.h
-wdInterruptHandler.o: buzzer.h led.h
+wdInterruptHandler.o: stateMachines.h
 
+stateMachines.o: led.h stateMachines.h
