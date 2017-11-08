@@ -11,13 +11,8 @@ AS              = msp430-elf-as
 all: blink.elf 
 
 #additional rules for files
-<<<<<<< HEAD
-buzzerBlink.elf: ${COMMON_OBJECTS} projectmain.o led.o buzzer.o wdInterruptHandler.o ../lib/libTimer.a
-	${CC} $(CFLAGS) $^ $(LDFLAGS) -o $@ 
-=======
-blink.elf: ${COMMON_OBJECTS} projectmain.o stateMachines.o led.o wdInterruptHandler.c ../lib/libTimer.a
+blink.elf: ${COMMON_OBJECTS} blinkMain.o stateMachines.o led.o wdInterruptHandler.c ../lib/libTimer.a
 	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^
->>>>>>> 4b5514239ca67c5570e411596aa506386eaf29f1
 
 load: blink.elf
 	mspdebug rf2500 "prog blink.elf"
