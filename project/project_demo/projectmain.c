@@ -2,6 +2,7 @@
 #include <libTimer.h>
 #include "buzzer.h"		/* for setPeriod */
 #include "led.h"		/* for led_control() */
+#include "switches.h"
 
 int 
 main() 
