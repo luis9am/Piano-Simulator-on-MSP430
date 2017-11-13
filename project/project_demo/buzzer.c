@@ -22,9 +22,7 @@ void buzzer_set_period(short cycles)
   CCR1 = cycles >> 1;		/* one half cycle */
 }
 
-void makeSounds() { /* sounds are played similar to violin matching both
-		     notes to strings and combining the btn next to it
-		    will simulate a new frequency */
+void makeSounds() { /* sounds are by string */
   
     if(btn1){
       
@@ -59,11 +57,6 @@ void makeSounds() { /* sounds are played similar to violin matching both
     else if (btn3 && btn4){
 
         buzzer_set_period(1580.63); //F0
-
-    }
-    else {
-      
-      buzzer_set_period(0);
 
     }
 }

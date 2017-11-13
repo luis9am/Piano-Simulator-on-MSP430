@@ -7,7 +7,7 @@
 #define LEDS (BIT0 | BIT6)
 
 extern unsigned char green_led_state, red_led_state;
-extern unsigned char led_changed;
+extern unsigned char leds_changed;
 
 void led_init();
 void led_update();
