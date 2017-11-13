@@ -34,7 +34,7 @@ switch_interrupt_handler()
     switch_state_down |= (p1val & SW2) ? 0 : 1;
     switch_state_down |= (p1val & SW3) ? 0 : 1;
     switch_state_down |= (p1val & SW4) ? 0 : 1;
-    btn1 = (p1val & SW1) ? 0 : 1;    /* apply switch operations to btn1-btn4  */
+    btn1 = (p1val & SW1) ? 0 : 1;    /* apply switch to btn1-btn4  */
     btn2 = (p1val & SW2) ? 0 : 1;
     btn3 = (p1val & SW3) ? 0 : 1;
     btn4 = (p1val & SW4) ? 0 : 1;

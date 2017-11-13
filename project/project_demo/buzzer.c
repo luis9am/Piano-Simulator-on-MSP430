@@ -2,16 +2,10 @@
 #include "libTimer.h"
 #include "switches.h"
 #include "buzzer.h"
+#include "led.h"
 
 void buzzer_init()
 {
-    /* 
-       Direct timer A output "TA0.1" to P2.6.  
-        According to table 21 from data sheet:
-          P2SEL2.6, P2SEL2.7, anmd P2SEL.7 must be zero
-          P2SEL.6 must be 1
-        Also: P2.6 direction must be output
-    */
     timerAUpmode();		/* used to drive speaker */
     P2SEL2 &= ~(BIT6 | BIT7);
     P2SEL &= ~BIT7; 
@@ -28,11 +22,12 @@ void buzzer_set_period(short cycles)
   CCR1 = cycles >> 1;		/* one half cycle */
 }
 
-void makeSounds() {
-    //buzzer_set_period(1117.67); //B0
-    //buzzer_set_period(1580.63); //F0
+void makeSounds() { /* sounds are played similar to violin matching both
+		     notes to strings and combining the btn next to it
+		    will simulate a new frequency */
+  
     if(btn1){
-
+      
         buzzer_set_period(1408.18); //G0
 
     }
@@ -51,8 +46,24 @@ void makeSounds() {
         buzzer_set_period(1674.62); //E0
 
     }
-}
-    
-    
-  
+    else if (btn1 && btn2){
 
+        buzzer_set_period(1117.67); //B0
+
+    }
+    else if (btn2 && btn3){
+
+        buzzer_set_period(2109.89); //C0
+
+    }
+    else if (btn3 && btn4){
+
+        buzzer_set_period(1580.63); //F0
+
+    }
+    else {
+      
+      buzzer_set_period(0);
+
+    }
+}

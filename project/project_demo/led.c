@@ -2,12 +2,8 @@
 #include "led.h"
 #include "switches.h"
 
-/*
-unsigned char red_on = 0, green_on = 0;
-unsigned char led_changed = 0;
 
 static char redVal[] = {0, LED_RED}, greenVal[] = {0, LED_GREEN};
-*/
 
 void led_init()
 {
@@ -20,9 +16,9 @@ void led_update()
 {
   if (switch_state_changed) {
     char ledFlags = 0; /* flags start at 0 */
-
-    ledFlags ^= switch_state_changed ? LED_RED : 0;
-    ledFlags ^= switch_state_changed ? 0 : LED_GREEN;
+    
+    ledFlags ^= (switch_state_changed) ? LED_RED : 0;
+    ledFlags ^= (switch_state_changed) ? 0 : LED_GREEN;
     
     P1OUT &= (0xff - LEDS) | ledFlags; // clear bit for off leds
     P1OUT ^= ledFlags;		     // set bit for on leds
