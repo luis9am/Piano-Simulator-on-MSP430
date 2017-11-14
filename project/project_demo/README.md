@@ -5,4 +5,4 @@ This project makes use of the MSP430 available functions to interpret a children
 Frequencies are from website: https://pages.mtu.edu/~suits/notefreqs.html
 
 Lab contains code from demos provided by Computer Architecture lab:
-Buzzer, led, switches, makefile, and main.
+buzzer, led, switches, makefile, and main.
