@@ -1,4 +1,9 @@
-#Lab 2: Blinky-Buzzy Toys
+## Code implemented is within "project" folder
+Source code was used and created by Eric Fruedenthal of the Univeristy of Texas El Paso Computer architecture course Fall 17.
+
+- - - - - - - - -  - - - - - - - -
+
+# Lab 2: Blinky-Buzzy Toys
 ## Project Description 
 
 Impressed with your work, ACME Solutions is now
