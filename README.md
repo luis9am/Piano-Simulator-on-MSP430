@@ -1,9 +1,14 @@
-## Code implemented is within "project" folder
-Source code was used and created by Eric Fruedenthal of the Univeristy of Texas El Paso Computer architecture course Fall 17.
+#Piano-Simulator-on-MSP430
+
+This project contains code from both the libraries (demos) built by Dr. Eric Fruedenthal and the project folder (project) constructed by me using the demos as example to create an operational msp430 piano.
+
+
+
 
 - - - - - - - - -  - - - - - - - -
 
-# Lab 2: Blinky-Buzzy Toys
+# Per Eric Fruedenthal (Arch1 Lab Description)
+## Lab 2: Blinky-Buzzy Toys
 ## Project Description 
 
 Impressed with your work, ACME Solutions is now
