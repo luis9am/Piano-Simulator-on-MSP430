@@ -1,15 +1,14 @@
-#Piano-Simulator-on-MSP430
+# Piano-Simulator-on-MSP430
 
 This project contains code from both the libraries (demos) built by Dr. Eric Fruedenthal and the project folder (project) constructed by me using the demos as example to create an operational msp430 piano.
 
 
 
-
 - - - - - - - - -  - - - - - - - -
 
-# Per Eric Fruedenthal (Arch1 Lab Description)
-## Lab 2: Blinky-Buzzy Toys
-## Project Description 
+## Per Eric Fruedenthal (Arch1 Lab Description)
+### Lab 2: Blinky-Buzzy Toys
+### Project Description 
 
 Impressed with your work, ACME Solutions is now
 requesting your help once again. A warehouse employee stumbled upon a
@@ -18,7 +17,7 @@ by the company, ACME Solutions wishes to install programs to turn
 these little boards into Christmas toys for children and donate them
 to local orphanges. This is where your help is needed.
 
-## Your Task 
+### Your Task 
 
 Each MSP430 board is equipped with buttons, LED's, a
 speaker, and an LED screen. Utilizing these features and your
@@ -36,7 +35,7 @@ This toy should at minimum
 Furthermore, at least one of the functions that implements state
 transitions must be written in well-documented assembly language.
 
-## Getting Started 
+### Getting Started 
 
 Inside the box, several demo programs were found
 alongside the MSP430 boards. ACME Solutions has provided these to you
